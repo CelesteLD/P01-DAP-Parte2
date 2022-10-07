@@ -17,7 +17,7 @@ public class Square extends ShapePolygonal {
 
     @Override
     public void draw() {
-        System.out.println("This is a shapes.Square");
+        System.out.println("This is a Square");
         System.out.println("Area: " + getArea());
         System.out.println("Perimeter: " + getPerimeter());
     }

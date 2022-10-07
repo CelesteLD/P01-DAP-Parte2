@@ -8,7 +8,7 @@ public class Main {
 
         do {
             System.out.println("Select the shape you want: ");
-            System.out.println("[1]. shapes.Square");
+            System.out.println("[1]. Square");
             System.out.println("[2]. Triangle");
             System.out.println("[3]. Circle");
             option = data.nextInt();
