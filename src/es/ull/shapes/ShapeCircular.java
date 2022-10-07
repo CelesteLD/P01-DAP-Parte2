@@ -1,10 +1,10 @@
 package es.ull.shapes;
 
-public abstract class Shape {
-    protected double width;
+public abstract class ShapeCircular {
+    double radius;
 
-    protected Shape(double width) {
-        this.width = width;
+    public ShapeCircular (double radius) {
+        this.radius = radius;
     }
 
     public abstract double getArea();

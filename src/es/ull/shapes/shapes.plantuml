@@ -5,7 +5,6 @@ title __SHAPES's Class Diagram__\n
   namespace Shapes-P1 {
     namespace es.ull.shapes {
       class es.ull.shapes.Circle {
-          ~ radius : double
           + Circle()
           + draw()
           + getArea()
@@ -17,12 +16,25 @@ title __SHAPES's Class Diagram__\n
 
   namespace Shapes-P1 {
     namespace es.ull.shapes {
-      abstract class es.ull.shapes.Shape {
+      abstract class es.ull.shapes.ShapeCircular {
+          ~ radius : double
+          + ShapeCircular()
+          {abstract} + draw()
+          {abstract} + getArea()
+          {abstract} + getPerimeter()
+      }
+    }
+  }
+  
+
+  namespace Shapes-P1 {
+    namespace es.ull.shapes {
+      abstract class es.ull.shapes.ShapePolygonal {
           # width : double
           {abstract} + draw()
           {abstract} + getArea()
           {abstract} + getPerimeter()
-          # Shape()
+          # ShapePolygonal()
       }
     }
   }
@@ -53,9 +65,9 @@ title __SHAPES's Class Diagram__\n
   }
   
 
-  es.ull.shapes.Circle -up-|> es.ull.shapes.Shape
-  es.ull.shapes.Square -up-|> es.ull.shapes.Shape
-  es.ull.shapes.Triangle -up-|> es.ull.shapes.Shape
+  es.ull.shapes.Circle -up-|> es.ull.shapes.ShapeCircular
+  es.ull.shapes.Square -up-|> es.ull.shapes.ShapePolygonal
+  es.ull.shapes.Triangle -up-|> es.ull.shapes.ShapePolygonal
 
 
 right footer

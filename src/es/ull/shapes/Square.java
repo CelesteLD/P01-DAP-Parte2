@@ -1,7 +1,6 @@
 package es.ull.shapes;
 
-public class Square extends Shape {
-
+public class Square extends ShapePolygonal {
     public Square(double width) {
         super(width);
     }
@@ -23,3 +22,5 @@ public class Square extends Shape {
         System.out.println("Perimeter: " + getPerimeter());
     }
 }
+
+

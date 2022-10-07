@@ -1,13 +1,9 @@
 package es.ull.shapes;
 
-public class Circle extends Shape {
-
-    double radius;
+public class Circle extends ShapeCircular {
 
     public Circle(double radius) {
-        super(radius * 2);
-        this.radius = radius;
-
+        super(radius);
     }
     @Override
     public double getArea() {

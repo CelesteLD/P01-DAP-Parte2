@@ -1,7 +1,6 @@
 package es.ull.shapes;
 
-public class Triangle extends Shape {
-
+public class Triangle extends ShapePolygonal {
     double height;
 
     public Triangle(double width,double heigth) {
@@ -25,3 +24,5 @@ public class Triangle extends Shape {
         System.out.println("Perimeter: " + getPerimeter());
     }
 }
+
+

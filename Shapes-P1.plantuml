@@ -18,7 +18,15 @@ title __SHAPES-P1's Class Diagram__\n
 
   namespace Shapes-P1 {
     namespace es.ull.shapes {
-      abstract class es.ull.shapes.Shape {
+      abstract class es.ull.shapes.ShapeCircular {
+      }
+    }
+  }
+  
+
+  namespace Shapes-P1 {
+    namespace es.ull.shapes {
+      abstract class es.ull.shapes.ShapePolygonal {
       }
     }
   }
@@ -40,9 +48,9 @@ title __SHAPES-P1's Class Diagram__\n
   }
   
 
-  es.ull.shapes.Circle -up-|> es.ull.shapes.Shape
-  es.ull.shapes.Square -up-|> es.ull.shapes.Shape
-  es.ull.shapes.Triangle -up-|> es.ull.shapes.Shape
+  es.ull.shapes.Circle -up-|> es.ull.shapes.ShapeCircular
+  es.ull.shapes.Square -up-|> es.ull.shapes.ShapePolygonal
+  es.ull.shapes.Triangle -up-|> es.ull.shapes.ShapePolygonal
 
 
 right footer
