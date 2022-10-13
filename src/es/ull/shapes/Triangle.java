@@ -1,9 +1,11 @@
 package es.ull.shapes;
 
+import java.awt.*;
+
 public class Triangle extends ShapePolygonal {
     double height;
 
-    public Triangle(double width,double heigth) {
+    public Triangle(double width, double heigth) {
         super(width);
         this.height = heigth;
     }
@@ -18,10 +20,9 @@ public class Triangle extends ShapePolygonal {
     }
 
     @Override
-    public void draw() {
-        System.out.println("This is a Triangle");
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+    public void draw(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+
     }
 }
 

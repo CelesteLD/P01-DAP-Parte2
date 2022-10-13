@@ -1,5 +1,7 @@
 package es.ull.shapes;
 
+import java.awt.*;
+
 public class Circle extends ShapeCircular {
 
     public Circle(double radius) {
@@ -16,9 +18,8 @@ public class Circle extends ShapeCircular {
     }
 
     @Override
-    public void draw() {
-        System.out.println("This is a triangle: ");
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+    public void draw(Graphics g) {
+        // Completar
+
     }
 }

@@ -1,5 +1,8 @@
 package es.ull.shapes;
 
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
+
 public class Square extends ShapePolygonal {
     public Square(double width) {
         super(width);
@@ -16,10 +19,7 @@ public class Square extends ShapePolygonal {
     }
 
     @Override
-    public void draw() {
-        System.out.println("This is a Square");
-        System.out.println("Area: " + getArea());
-        System.out.println("Perimeter: " + getPerimeter());
+    public void draw(Graphics g) {
     }
 }
 

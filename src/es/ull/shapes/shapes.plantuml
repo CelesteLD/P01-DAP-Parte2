@@ -2,70 +2,124 @@
 
 title __SHAPES's Class Diagram__\n
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Circle {
-          + Circle()
-          + draw()
-          + getArea()
-          + getPerimeter()
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.Circle {
+        + Circle()
+        + draw()
+        + getArea()
+        + getPerimeter()
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      abstract class es.ull.shapes.ShapeCircular {
-          ~ radius : double
-          + ShapeCircular()
-          {abstract} + draw()
-          {abstract} + getArea()
-          {abstract} + getPerimeter()
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.Main {
+        {static} + main()
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      abstract class es.ull.shapes.ShapePolygonal {
-          # width : double
-          {abstract} + draw()
-          {abstract} + getArea()
-          {abstract} + getPerimeter()
-          # ShapePolygonal()
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyButton {
+        + MyButton()
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Square {
-          + Square()
-          + draw()
-          + getArea()
-          + getPerimeter()
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyDialog {
+        + MyDialog()
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Triangle {
-          ~ height : double
-          + Triangle()
-          + draw()
-          + getArea()
-          + getPerimeter()
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyFrame {
+        + MyFrame()
+        - putExitButtonPrincipal()
+        - setButtonCircle()
+        - setButtonSquare()
+        - setButtonTriangle()
+        - setButtons()
+        - setLabels()
+        - setLabelsImage()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyLabel {
+        + MyLabel()
+        + MyLabel()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyPanel {
+        + MyPanel()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyTextField {
+        + MyTextField()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    abstract class es.ull.shapes.ShapeCircular {
+        # radius : double
+        + ShapeCircular()
+        {abstract} + draw()
+        {abstract} + getArea()
+        {abstract} + getPerimeter()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    abstract class es.ull.shapes.ShapePolygonal {
+        # width : double
+        {abstract} + draw()
+        {abstract} + getArea()
+        {abstract} + getPerimeter()
+        # ShapePolygonal()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.Square {
+        + Square()
+        + draw()
+        + getArea()
+        + getPerimeter()
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.Triangle {
+        ~ height : double
+        + Triangle()
+        + draw()
+        + getArea()
+        + getPerimeter()
     }
   }
   
 
   es.ull.shapes.Circle -up-|> es.ull.shapes.ShapeCircular
+  es.ull.shapes.MyButton -up-|> javax.swing.JButton
+  es.ull.shapes.MyDialog -up-|> javax.swing.JDialog
+  es.ull.shapes.MyFrame -up-|> javax.swing.JFrame
+  es.ull.shapes.MyFrame o-- es.ull.shapes.MyPanel : panel
+  es.ull.shapes.MyLabel -up-|> javax.swing.JLabel
+  es.ull.shapes.MyPanel -up-|> javax.swing.JPanel
+  es.ull.shapes.MyTextField -up-|> javax.swing.JTextField
   es.ull.shapes.Square -up-|> es.ull.shapes.ShapePolygonal
   es.ull.shapes.Triangle -up-|> es.ull.shapes.ShapePolygonal
 

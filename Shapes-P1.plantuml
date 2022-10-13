@@ -2,53 +2,86 @@
 
 title __SHAPES-P1's Class Diagram__\n
 
-  namespace Shapes-P1 {
-    class Main {
+  namespace es.ull.shapes {
+    class es.ull.shapes.Circle {
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Circle {
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.Main {
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      abstract class es.ull.shapes.ShapeCircular {
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyButton {
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      abstract class es.ull.shapes.ShapePolygonal {
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyDialog {
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Square {
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyFrame {
     }
   }
   
 
-  namespace Shapes-P1 {
-    namespace es.ull.shapes {
-      class es.ull.shapes.Triangle {
-      }
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyLabel {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyPanel {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.MyTextField {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    abstract class es.ull.shapes.ShapeCircular {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    abstract class es.ull.shapes.ShapePolygonal {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.Square {
+    }
+  }
+  
+
+  namespace es.ull.shapes {
+    class es.ull.shapes.Triangle {
     }
   }
   
 
   es.ull.shapes.Circle -up-|> es.ull.shapes.ShapeCircular
+  es.ull.shapes.MyButton -up-|> javax.swing.JButton
+  es.ull.shapes.MyDialog -up-|> javax.swing.JDialog
+  es.ull.shapes.MyFrame -up-|> javax.swing.JFrame
+  es.ull.shapes.MyFrame o-- es.ull.shapes.MyPanel : panel
+  es.ull.shapes.MyLabel -up-|> javax.swing.JLabel
+  es.ull.shapes.MyPanel -up-|> javax.swing.JPanel
+  es.ull.shapes.MyTextField -up-|> javax.swing.JTextField
   es.ull.shapes.Square -up-|> es.ull.shapes.ShapePolygonal
   es.ull.shapes.Triangle -up-|> es.ull.shapes.ShapePolygonal
 
